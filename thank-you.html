@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Lesly Abril</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0F0D0D; --panel:#1B1616; --ink:#F5EDE8; --ink-soft:#D9D2C9; --gold:#D62839; --gold-light:#3A1418; --line:#332A29; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit}
+  .top{border-bottom:1px solid var(--line)}
+  .top .in{max-width:1080px;margin:0 auto;padding:20px 32px;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-style:italic;font-weight:600;font-size:1.3rem;text-decoration:none}
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding:70px 22px;position:relative;overflow:hidden}
+  main::before{content:'';position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(214,40,57,.16) 0%,rgba(214,40,57,0) 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+  .card{position:relative;max-width:620px;text-align:center}
+  .check{width:84px;height:84px;margin:0 auto 30px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;animation:pop .6s cubic-bezier(.16,1,.3,1) both}
+  .check svg{width:38px;height:38px}
+  .check path{stroke-dasharray:40;stroke-dashoffset:40;animation:draw .6s .35s ease forwards}
+  @keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .eyebrow::before,.eyebrow::after{content:'';width:30px;height:1px;background:var(--gold)}
+  h1{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:600;line-height:1.1}
+  h1 em{color:var(--gold);font-style:italic}
+  p.lede{color:var(--ink-soft);font-size:1.05rem;margin:20px auto 0;max-width:46ch}
+  .steps{margin:40px 0 0;text-align:left;border-top:1px solid var(--line)}
+  .step{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .step .n{color:var(--gold);font-style:italic;font-weight:600}
+  .step b{display:block;font-weight:500}
+  .step span{color:var(--ink-soft);font-size:.92rem}
+  .step a{color:var(--gold);text-decoration:none}
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:38px}
+  .btn{padding:15px 28px;border-radius:999px;text-decoration:none;font-size:.9rem;transition:box-shadow .3s ease,background .3s ease,color .3s ease}
+  .btn.solid{background:var(--ink);color:var(--bg)}
+  .btn.solid:hover{box-shadow:0 14px 30px rgba(214,40,57,.35)}
+  .btn.ghost{border:1.5px solid var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--bg)}
+  footer{text-align:center;padding:30px 0 40px;font-size:.78rem;color:var(--ink-soft)}
+  @media(max-width:600px){ .top .in{padding:18px} }
+</style>
+</head>
+<body>
+<div class="top"><div class="in"><a class="brand" href="./">Lesly Abril</a></div></div>
+<main>
+  <div class="card">
+    <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#D62839" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <div class="eyebrow">Message Sent</div>
+    <h1>Thank you for <em>reaching out</em>.</h1>
+    <p class="lede">Your message landed safely in my inbox. I'll read it carefully and get back to you as soon as I can.</p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><div><b>I review your message</b><span>I'll look at what you need and how I can help.</span></div></div>
+      <div class="step"><div class="n">02</div><div><b>I reply by email</b><span>Watch your inbox, and check spam or promotions just in case.</span></div></div>
+      <div class="step"><div class="n">03</div><div><b>Need a faster reply?</b><span>Message me on <a href="https://wa.me/639946238225" target="_blank" rel="noopener">WhatsApp</a> or <a href="https://t.me/Lesly_Abril" target="_blank" rel="noopener">Telegram</a>.</span></div></div>
+    </div>
+    <div class="btns">
+      <a class="btn solid" href="./#work">Explore my case studies →</a>
+      <a class="btn ghost" href="./">Back to portfolio</a>
+    </div>
+  </div>
+</main>
+<footer>Lesly Abril</footer>
+</body>
+</html>

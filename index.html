@@ -593,7 +593,7 @@
     cfStatus.className = 'form-status show'; cfStatus.textContent = 'Sending...';
     try{
       const res = await fetch(cf.action, { method:'POST', body:new FormData(cf), headers:{'Accept':'application/json'} });
-      if(res.ok){ cfStatus.className = 'form-status show ok'; cfStatus.textContent = "Thanks! I'll get back to you soon."; cf.reset(); }
+      if(res.ok){ cf.reset(); window.location.href = 'thank-you.html'; }
       else { cfStatus.className = 'form-status show err'; cfStatus.textContent = 'Something went wrong, please email me directly.'; }
     } catch(err){ cfStatus.className = 'form-status show err'; cfStatus.textContent = 'Something went wrong, please email me directly.'; }
   });
