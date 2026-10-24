@@ -486,7 +486,7 @@
       <button type="submit" class="form-submit">Send Message</button>
       <div class="form-status" id="form-status"></div>
     </form>
-    <div class="form-note">Or reach me directly at <a href="mailto:leslyaxiomaabril@gmail.com">leslyaxiomaabril@gmail.com</a> · <a href="https://wa.me/639946238225" target="_blank" rel="noopener">WhatsApp: +63 994 623 8225</a> · <a href="https://t.me/Lesly_Abril" target="_blank" rel="noopener">Telegram: @Lesly_Abril</a></div>
+    <div class="form-note">Or reach me directly at <a href="mailto:leslyaxiomaabril@gmail.com" id="email-link">leslyaxiomaabril@gmail.com</a><span id="copied" style="display:none;color:#4ADE80;margin-left:6px">Copied!</span> · <a href="https://wa.me/639946238225" target="_blank" rel="noopener">WhatsApp: +63 994 623 8225</a> · <a href="https://t.me/Lesly_Abril" target="_blank" rel="noopener">Telegram: @Lesly_Abril</a></div>
     <div class="fine">Lesly Abril</div>
   </div>
 </footer>
@@ -596,6 +596,12 @@
       if(res.ok){ cfStatus.className = 'form-status show ok'; cfStatus.textContent = "Thanks! I'll get back to you soon."; cf.reset(); }
       else { cfStatus.className = 'form-status show err'; cfStatus.textContent = 'Something went wrong, please email me directly.'; }
     } catch(err){ cfStatus.className = 'form-status show err'; cfStatus.textContent = 'Something went wrong, please email me directly.'; }
+  });
+
+
+  // Email: open mail app and copy the address
+  document.getElementById('email-link').addEventListener('click', ()=>{
+    try{ navigator.clipboard.writeText('leslyaxiomaabril@gmail.com').then(()=>{ const c=document.getElementById('copied'); c.style.display='inline'; setTimeout(()=>c.style.display='none',2500); }); }catch(e){}
   });
 
   // Scroll reveal
