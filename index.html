@@ -418,6 +418,7 @@
       <button data-f="email">Email &amp; Automation</button>
       <button data-f="design">Graphic Design</button>
       <button data-f="ops">Operations &amp; Documents</button>
+      <button data-f="edit">Editorial &amp; Publication</button>
     </div>
     <div class="sample-grid reveal" id="sample-grid"></div>
   </section>
@@ -528,10 +529,13 @@
     {f:'ops',    id:'gmail-invoices-labels-hd',     t:'Inbox organisation with labels',s:'Gmail, sample data'},
     {f:'ops',    id:'gmail-follow-up-hd',           t:'Follow up tracking',            s:'Gmail, sample data'},
     {f:'ops',    id:'expense-tracker-hd',           t:'Expense tracker',               s:'Google Sheets, sample data'},
-    {f:'ops',    id:'bathroom-handover-document',   t:'Client handover document',      s:'SOP and care guide'}
+    {f:'ops',    id:'bathroom-handover-document',   t:'Client handover document',      s:'SOP and care guide'},
+    {f:'edit',   id:'norsunian-front-page',         t:'Campus newspaper front page',   s:'Layout team, Microsoft Publisher'},
+    {f:'edit',   id:'norsunian-features-page',      t:'Features page layout',          s:'Layout team, Microsoft Publisher'},
+    {f:'edit',   id:'norsunian-news-page',          t:'News page layout',              s:'Layout team, Microsoft Publisher'}
   ];
   const grid = document.getElementById('sample-grid');
-  const CATS = [['web','Web & Funnels'],['email','Email & Automation'],['design','Graphic Design'],['ops','Operations & Documents']];
+  const CATS = [['web','Web & Funnels'],['email','Email & Automation'],['design','Graphic Design'],['ops','Operations & Documents'],['edit','Editorial & Publication']];
   grid.innerHTML = CATS.map(([key,label])=>{
     const items = SAMPLES.map((x,i)=>({x,i})).filter(o=>o.x.f===key && !o.x.hide);
     return `<div class="cat" data-f="${key}">
